@@ -1,22 +1,25 @@
 import express from 'express';
-// const cookieParser = require('cookie-parser');
-// const cors = require('cors');
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
+
+import index from './routes/index.js'
+import login from './routes/login.route.js';
 
 const app = express();
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-// app.use(express.json({ type: 'application/vnd.api+json' }));
-// app.use(cookieParser());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.json({ type: 'application/vnd.api+json' }));
+app.use(cookieParser());
 
-// const corsOptions = {
-//     origin: 'http://localhost:8080',
-//     credentials: true,
-//   }
+const corsOptions = {
+    origin: 'http://localhost:8080',
+    credentials: true,
+}
 
-// app.use(cors(corsOptions))
-// app.use(cookieParser());
+app.use(cors(corsOptions))
+app.use(cookieParser());
 
-
-
+app.use(index)
+app.use(login)
 
 export default app;
