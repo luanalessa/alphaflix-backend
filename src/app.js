@@ -12,7 +12,7 @@ app.use(express.json({ type: 'application/vnd.api+json' }));
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: 'http://localhost:8080',
+    origin: 'http://localhost:3000',
     credentials: true,
 }
 
