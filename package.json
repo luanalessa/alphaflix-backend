@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "json-server server.json --port 3333"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lessa",
   "license": "ISC",
@@ -17,7 +16,6 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",
-    "json-server": "^0.17.0",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.13",
     "pg": "^8.7.1",
