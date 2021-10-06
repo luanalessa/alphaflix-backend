@@ -2,7 +2,7 @@
 
 <p align = "center">
 <img src="https://img.shields.io/badge/author-luanalessa-4dae71?style=flat-square" />
- <img src="https://img.shields.io/github/languages/count/luanalessa/alphaflix-frontend?color=4dae71&style=flat-square" />
+ <img src="https://img.shields.io/github/languages/count/luanalessa/alphaflix-backend?color=4dae71&style=flat-square" />
 
 </br> 
 </br>
