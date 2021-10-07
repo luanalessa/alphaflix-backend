@@ -4,6 +4,8 @@ import cors from 'cors';
 
 import index from './routes/index.js'
 import login from './routes/login.route.js';
+import movies from './routes/movies.route.js';
+
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -21,5 +23,7 @@ app.use(cookieParser());
 
 app.use(index)
 app.use(login)
+app.use(movies)
+
 
 export default app;
