@@ -23,10 +23,10 @@ pool.on('connect', () => {
     console.log('Successfully connected!');
 });
 
-const startDatabase = (query, value) => {
+const startDatabase = (query) => {
     return new Promise((resolve, reject) => {
       pool.connect()
-        .then(client => client.query(query, value)
+        .then(client => client.query(query)
           .then(result => resolve(result.rows))
           .catch((err) => reject(err)))
           .finally( () => client.release())
