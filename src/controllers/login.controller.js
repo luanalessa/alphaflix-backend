@@ -1,7 +1,7 @@
-import { select } from '../config/query.js'
+import { selectUser } from '../queries/select.js'
 
 const login = (req, res) => {
-    select(req, res, 'public.user')
+    selectUser(req, res, 'public.user')
 }
 
 const logout = (req, res) => {

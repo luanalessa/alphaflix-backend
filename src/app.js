@@ -5,6 +5,8 @@ import cors from 'cors';
 import index from './routes/index.js'
 import login from './routes/login.route.js';
 import movies from './routes/movies.route.js';
+import cart from './routes/cart.route.js';
+
 
 
 const app = express();
@@ -24,6 +26,8 @@ app.use(cookieParser());
 app.use(index)
 app.use(login)
 app.use(movies)
+app.use(cart)
+
 
 
 export default app;

@@ -11,3 +11,11 @@ export const sign =  ( username ) => {
     })
 }
 
+export const verify =  ( token ) => {
+    return new Promise((resolve, reject) => {
+        jwt.verify(token, secret, (err, token) => {
+            if(err) reject(err)
+            if(token) resolve(token)
+        });
+    })
+}

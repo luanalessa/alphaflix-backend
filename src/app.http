@@ -8,9 +8,29 @@ Content-Type: application/json
 }
 ###
 
+POST http://localhost:8000/cart HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"lessa@gmail.com"
+
+}
+###
+POST http://localhost:8000/cart/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_id":"1",
+    "movie_id":"2",
+    "status": "false"
+}
+###
+
 GET http://localhost:8000/home/ HTTP/1.1
 
 ###
+
+
 
 GET http://localhost:8000/home/movie/Bruce+Almighty HTTP/1.1
 
