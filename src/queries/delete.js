@@ -7,9 +7,8 @@ export const deleteCart=  (req, res) => {
 
     const query = `UPDATE cart SET`
     + ' deleted_date = NOW()'
-    + ` WHERE cart.movie_id = (SELECT id FROM movie WHERE movie.title = '${title}') RETURNING *`
+    + ` WHERE cart.movie_id = (SELECT id FROM movie WHERE movie.title = '${title}')`
     
-    console.log(query)
     startDatabase(query)
         .then(result => res.send(result))
 

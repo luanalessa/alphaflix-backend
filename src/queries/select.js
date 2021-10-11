@@ -50,7 +50,7 @@ export const selectCart = async (req, res, table) => {
         + " ON C.movie_id = M.id"
         + ` WHERE email = '${response.username}' AND C.deleted_date is NULL AND C.status = false`  
         
-        startDatabase(query)
+         startDatabase(query)
         .then(result => res.send(result))
     }) 
 }

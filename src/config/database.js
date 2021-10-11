@@ -26,10 +26,11 @@ pool.on('connect', () => {
 const startDatabase = (query) => {
     return new Promise((resolve, reject) => {
       pool.connect()
-        .then(client => client.query(query)
-          .then(result => resolve(result.rows))
-          .catch((err) => reject(err)))
-          .finally( () => client.release())
+        .then((client) => client
+            .query(query)
+            .then(result => resolve(result.rows))
+            .catch((err) => reject(err))
+            .finally(() => client.release()))
         .catch((err) => reject(err));
     })
 }
